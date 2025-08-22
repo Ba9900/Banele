@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills | My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+            color: #22223b;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        /* Floating animated icons */
+        .floating-icons {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .floating-icons i {
+            position: absolute;
+            opacity: 0.13;
+            font-size: 2.5rem;
+            color: #4f46e5;
+            animation: float 12s linear infinite;
+        }
+        .floating-icons i:nth-child(1) { left: 10vw; top: 20vh; animation-delay: 0s;}
+        .floating-icons i:nth-child(2) { left: 80vw; top: 10vh; animation-delay: 2s;}
+        .floating-icons i:nth-child(3) { left: 50vw; top: 70vh; animation-delay: 4s;}
+        .floating-icons i:nth-child(4) { left: 30vw; top: 60vh; animation-delay: 6s;}
+        .floating-icons i:nth-child(5) { left: 70vw; top: 40vh; animation-delay: 8s;}
+        @keyframes float {
+            0% { transform: translateY(0) scale(1);}
+            50% { transform: translateY(-40px) scale(1.2);}
+            100% { transform: translateY(0) scale(1);}
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto 0 auto;
+            background:lightblue;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(60, 72, 88, 0.12);
+            padding: 40px 32px 32px 32px;
+            animation: fadeIn 1.2s cubic-bezier(.4,0,.2,1);
+            position: relative;
+            z-index: 1;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(40px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 32px;
+            background: rgba(88, 80, 238, 0.07);
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(79,70,229,0.08);
+            padding: 10px 18px;
+            backdrop-filter: blur(2px);
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #4f46e5;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 8px #a5b4fc55;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links li a {
+            text-decoration: none;
+            color: #22223b;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .nav-links li a:hover, .nav-links li a:focus, .nav-links li a[href="skills.html"] {
+            background: #4f46e5;
+            color: #fff;
+            box-shadow: 0 2px 12px #4f46e555;
+        }
+        h4 {
+            font-size: 1.4rem;
+            margin-bottom: 24px;
+            color: #4f46e5;
+            font-weight: 700;
+            letter-spacing: 1px;
+            animation: slideIn 1s 0.2s both;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-40px);}
+            to { opacity: 1; transform: translateX(0);}
+        }
+        ul {
+            margin: 0 0 24px 0;
+            padding: 0 0 0 24px;
+        }
+        ul > li {
+            margin-bottom: 18px;
+            font-size: 1.1rem;
+            position: relative;
+            animation: fadeInUp 0.7s both;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        ul > li > strong {
+            font-size: 1.18rem;
+            color: #22223b;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            filter: drop-shadow(0 2px 8px #a5b4fc33);
+        }
+        ul > li > strong .fa-solid, ul > li > strong .fa-brands {
+            color: #4f46e5;
+            font-size: 1.3em;
+            animation: popIn 0.7s;
+            filter: drop-shadow(0 0 8px #a5b4fc55);
+            transition: transform 0.2s;
+        }
+        ul > li > strong:hover .fa-solid, ul > li > strong:hover .fa-brands {
+            transform: scale(1.2) rotate(-8deg);
+        }
+        @keyframes popIn {
+            from { transform: scale(0.5); opacity: 0;}
+            to { transform: scale(1); opacity: 1;}
+        }
+        ul ul {
+            margin-top: 10px;
+            padding-left: 24px;
+        }
+        ul ul li {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 22px;
+            color: #37306b;
+            opacity: 0.92;
+            animation: fadeInUp 0.7s both;
+        }
+        ul ul li:before {
+            content: "\f058";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #4f46e5;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-size: 1em;
+            opacity: 0.8;
+            transition: color 0.2s;
+        }
+        p {
+            font-size: 1.08rem;
+            color: #444;
+            margin-bottom: 12px;
+            line-height: 1.7;
+            animation: fadeIn 1.2s 0.3s both;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        /* Scroll-to-top button */
+        #toTop {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            background: #4f46e5;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 16px #4f46e555;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+            z-index: 10;
+        }
+        #toTop.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        #toTop:hover {
+            background: #3730a3;
+        }
+        @media (max-width: 700px) {
+            .container {
+                padding: 18px 6vw;
+            }
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            #toTop {
+                bottom: 16px;
+                right: 16px;
+                width: 40px;
+                height: 40px;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-icons">
+        <i class="fa-solid fa-code"></i>
+        <i class="fa-solid fa-chart-line"></i>
+        <i class="fa-solid fa-people-group"></i>
+        <i class="fa-solid fa-house-chimney"></i>
+        <i class="fa-solid fa-star"></i>
+    </div>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo"><i class="fa-solid fa-laptop-code"></i> </div>
+            <ul class="nav-links">
+                <li><a href="home.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="about.html"><i class="fa-solid fa-user"></i> About</a></li>
+                <li><a href="projects.html"><i class="fa-solid fa-diagram-project"></i> Projects</a></li>
+                <li><a href="skills.html"><i class="fa-solid fa-star"></i> Skills</a></li>
+                <li><a href="experience.html"><i class="fa-solid fa-briefcase"></i> Experience</a></li>
+                
+            </ul>
+        </nav>
+        <h4><i class="fa-solid fa-lightbulb"></i> In my journey I have managed to acquire the following skills</h4>
+        <ul>
+            <li>
+                <strong><i class="fa-solid fa-code"></i> Website Development Skills</strong>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>Git and GitHub</li>
+                    <li>Responsive Web Design</li>
+                    <li>Web Accessibility Standards</li>
+                    <li>Content Management Systems (CMS)</li>
+                    <li>SEO Basics</li>
+                    <li>Basic Graphic Design</li>
+                    <li>Basic Understanding of UI/UX Principles</li>
+                    <li>Basic Understanding of Web Security Principles</li>
+                    <li>Basic Understanding of APIs</li>
+                    <li>Basic Understanding of Cloud Services</li>
+                    <li>Basic Understanding of Version Control Systems</li>
+                    <li>Basic Understanding of Web Performance Optimization</li>
+                    <li>Basic Understanding of Web Analytics</li>
+                    <li>Basic Understanding of Cross-Browser Compatibility</li>
+                    <li>Basic Understanding of Mobile-First Design</li>
+                    <li>Basic Understanding of Progressive Web Apps (PWAs)</li>
+                    <li>Basic Understanding of Single Page Applications (SPAs)</li>
+                    <li>Basic Understanding of Web Components</li>
+                    <li>Basic Understanding of Server-Side Rendering (SSR)</li>
+                    <li>Web development</li>
+                </ul>
+            </li>
+            <li>
+                <strong><i class="fa-solid fa-chart-line"></i> Business Analysis & IT Skills</strong>
+                <ul>
+                    <li>Business analysis</li>
+                    <li>Project management</li>
+                    <li>Data analysis</li>
+                    <li>Database management</li>
+                    <li>Software testing</li>
+                    <li>Network troubleshooting</li>
+                    <li>System administration</li>
+                    <li>IT support</li>
+                    <li>Technical writing</li>
+                    <li>Research skills</li>
+                </ul>
+            </li>
+            <li>
+                <strong><i class="fa-solid fa-people-group"></i> Professional & Soft Skills</strong>
+                <ul>
+                    <li>Problem Solving</li>
+                    <li>Critical thinking</li>
+                    <li>Team Collaboration</li>
+                    <li>Communication Skills</li>
+                    <li>Time Management</li>
+                    <li>Adaptability</li>
+                    <li>Attention to Detail</li>
+                    <li>Customer service</li>
+                    <li>Continuous Learning Mindset</li>
+                    <li>Collaboration</li>
+                </ul>
+            </li>
+            <li>
+                <strong><i class="fa-solid fa-house-chimney"></i> Home Design Skills</strong>
+                <ul>
+                    <li>House design</li>
+                    <li>Architectural design</li>
+                    <li>Interior design</li>
+                    <li>Space planning</li>
+                </ul>
+            </li>
+        </ul>
+        <p>
+            <i class="fa-solid fa-graduation-cap"></i>
+            These skills have been acquired through a combination of formal education, self-study, and practical experience. I am always looking to improve and expand my skill set to stay current with industry trends and technologies.
+        </p>
+        <p>
+            <i class="fa-solid fa-envelope"></i>
+            Feel free to reach out if you would like to discuss any of these skills.
+        </p>
+    </div>
+    <button id="toTop" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script>
+        // Show scroll-to-top button
+        const toTop = document.getElementById('toTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                toTop.classList.add('show');
+            } else {
+                toTop.classList.remove('show');
+            }
+        });
+        toTop.addEventListener('click', () => {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+    </script>
+</body>
+</html>

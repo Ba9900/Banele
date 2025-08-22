@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications</title>
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(60,72,100,0.15);
+            padding: 32px 24px 40px 24px;
+            animation: fadeIn 1s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(40px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 32px;
+        }
+        .logo i {
+            font-size: 2rem;
+            color: #6366f1;
+            animation: bounce 1.2s infinite alternate;
+        }
+        @keyframes bounce {
+            to { transform: translateY(-8px);}
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 18px;
+            padding: 0;
+            margin: 0;
+        }
+        .nav-links li a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 500;
+            padding: 8px 14px;
+            border-radius: 8px;
+            transition: background 0.2s, color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .nav-links li a:hover, .nav-links li a.active {
+            background: #6366f1;
+            color: #fff;
+        }
+        h2 {
+            color: #6366f1;
+            font-size: 2.2rem;
+            margin-bottom: 24px;
+            letter-spacing: 1px;
+            text-align: center;
+            animation: fadeIn 1.2s;
+        }
+        .cert-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .cert-item {
+            background: #f1f5f9;
+            border-radius: 12px;
+            margin-bottom: 22px;
+            padding: 22px 20px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            box-shadow: 0 2px 8px rgba(99,102,241,0.07);
+            animation: slideIn 0.7s;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-30px);}
+            to { opacity: 1; transform: translateX(0);}
+        }
+        .cert-icon {
+            font-size: 2.2rem;
+            color: #6366f1;
+            flex-shrink: 0;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1;}
+            50% { opacity: 0.7;}
+        }
+        .cert-details {
+            flex: 1;
+        }
+        .cert-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #22223b;
+        }
+        .cert-org {
+            color: #6366f1;
+            font-size: 1rem;
+            margin-top: 2px;
+        }
+        .cert-year {
+            color: #64748b;
+            font-size: 0.98rem;
+            margin-top: 2px;
+        }
+        .cert-pdf {
+            margin-left: 12px;
+        }
+        .cert-pdf a {
+            color: #10b981;
+            font-size: 1.5rem;
+            transition: color 0.2s;
+        }
+        .cert-pdf a:hover {
+            color: #059669;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 12px 4px 24px 4px;}
+            .cert-item { flex-direction: column; align-items: flex-start;}
+            .navbar { flex-direction: column; gap: 12px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-certificate"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="projects.html"><i class="fas fa-diagram-project"></i> Projects</a></li>
+                <li><a href="certifications.html" class="active"><i class="fas fa-certificate"></i> Certifications</a></li>
+                <li><a href="services.html"><i class="fas fa-concierge-bell"></i> Services</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+        <h2><i class="fas fa-certificate"></i> Certifications</h2>
+        <ul class="cert-list">
+            <li class="cert-item">
+                <span class="cert-icon"><i class="fas fa-laptop-code"></i></span>
+                <div class="cert-details">
+                    <div class="cert-title">Full Stack Development Certificate</div>
+                    <div class="cert-org">FNB Academy</div>
+                    <div class="cert-year">2025</div>
+                </div>
+                <div class="cert-pdf">
+                    <!-- Replace href with your PDF file path -->
+                    <a href="Banele-FNB-academy.pdf" target="_blank" title="View Certificate PDF">
+                        <i class="fas fa-file-pdf"></i>
+                    </a>
+                </div>
+            </li>
+            <li class="cert-item">
+                <span class="cert-icon"><i class="fas fa-headset"></i></span>
+                <div class="cert-details">
+                    <div class="cert-title">Technical Support Fundamentals</div>
+                    <div class="cert-org">Google</div>
+                    <div class="cert-year">2022</div>
+                </div>
+                <div class="cert-pdf">
+                    <a href="Coursera 6UWNGFP6B7F7.pdf" target="_blank" title="View Certificate PDF">
+                        <i class="fas fa-file-pdf"></i>
+                    </a>
+                </div>
+            </li>
+            <li class="cert-item">
+                <span class="cert-icon"><i class="fas fa-shield-alt"></i></span>
+                <div class="cert-details">
+                    <div class="cert-title">Cyber Security Short Course</div>
+                    <div class="cert-org">Oxford Home Study Centre</div>
+                    <div class="cert-year">2022</div>
+                </div>
+                <div class="cert-pdf">
+                    <a href="cybersecurity.pdf" target="_blank" title="View Certificate PDF">
+                        <i class="fas fa-file-pdf"></i>
+                    </a>
+                </div>
+            </li>
+            <li class="cert-item">
+                <span class="cert-icon"><i class="fas fa-network-wired"></i></span>
+                <div class="cert-details">
+                    <div class="cert-title">IT Essentials Certificate</div>
+                    <div class="cert-org">Cisco Networking Academy</div>
+                    <div class="cert-year">2018</div>
+                </div>
+                <div class="cert-pdf">
+                    <a href="IT_Essentials.pdf" target="_blank" title="View Certificate PDF">
+                        <i class="fas fa-file-pdf"></i>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

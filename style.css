@@ -1,0 +1,33 @@
+body{
+    background-color: lightblue;
+    color:brown;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+
+}
+li{
+    font: 1em sans-serif;
+    margin-bottom: 10px;
+    list-style-type: square;
+    padding-left: 20px;
+    color: darkblue;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+
+
+}
+li:hover {
+    color: darkred;
+}
+h1 {
+    font-size: 2.5em;
+    color: darkred;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+

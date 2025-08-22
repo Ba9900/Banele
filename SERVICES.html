@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:600,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0f7fa 0%, #b3e5fc 100%);
+            min-height: 100vh;
+            color: #222;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: rgba(255,255,255,0.95);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            padding: 32px 40px 40px 40px;
+            animation: fadeIn 1.2s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(40px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 32px;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #039be5;
+            letter-spacing: 2px;
+            animation: logoPop 1s;
+        }
+        @keyframes logoPop {
+            0% { transform: scale(0.7);}
+            80% { transform: scale(1.1);}
+            100% { transform: scale(1);}
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 22px;
+            padding: 0;
+            margin: 0;
+        }
+        .nav-links li a {
+            text-decoration: none;
+            color: #039be5;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+        }
+        .nav-links li a:hover, .nav-links li a:focus {
+            background: #b3e5fc;
+            color: #01579b;
+            transform: translateY(-2px) scale(1.07);
+        }
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #01579b;
+            margin-bottom: 32px;
+            letter-spacing: 2px;
+            position: relative;
+            animation: slideDown 1s;
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-30px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 28px;
+            padding: 0;
+            margin: 0;
+        }
+        .service-card {
+            background: #e1f5fe;
+            border-radius: 14px;
+            box-shadow: 0 4px 16px rgba(3,155,229,0.07);
+            padding: 28px 22px;
+            text-align: center;
+            transition: transform 0.25s, box-shadow 0.25s;
+            position: relative;
+            overflow: hidden;
+            animation: cardFadeIn 0.8s;
+        }
+        .service-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(3,155,229,0.13);
+        }
+        @keyframes cardFadeIn {
+            from { opacity: 0; transform: scale(0.95);}
+            to { opacity: 1; transform: scale(1);}
+        }
+        .service-icon {
+            font-size: 2.7rem;
+            margin-bottom: 14px;
+            display: block;
+            animation: iconBounce 1.2s;
+        }
+        @keyframes iconBounce {
+            0% { transform: scale(0.7);}
+            60% { transform: scale(1.2);}
+            100% { transform: scale(1);}
+        }
+        .service-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #0277bd;
+            margin-bottom: 8px;
+        }
+        .service-desc {
+            font-size: 1rem;
+            color: #333;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 18px 6px 24px 6px;}
+            .navbar { flex-direction: column; gap: 12px;}
+            .nav-links { flex-wrap: wrap; gap: 10px;}
+            h2 { font-size: 2rem;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <span style="font-size:2.1rem;">&#128187;</span> <!-- Laptop emoji as logo -->
+        
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <h2>SERVICES</h2>
+        <div class="services-list">
+            <div class="service-card">
+                <span class="service-icon">&#128187;</span>
+                <div class="service-title">Web Development</div>
+                <div class="service-desc">Creating responsive and user-friendly websites.</div>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">&#128187;&#65039;</span>
+                <div class="service-title">Software Development</div>
+                <div class="service-desc">Developing custom software solutions tailored to client needs.</div>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">&#128187;&#128161;</span>
+                <div class="service-title">IT Consulting</div>
+                <div class="service-desc">Providing expert advice on IT strategies and implementations.</div>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">&#128274;</span>
+                <div class="service-title">Cybersecurity Services</div>
+                <div class="service-desc">Ensuring the security of systems and data against cyber threats.</div>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">&#128295;</span>
+                <div class="service-title">Technical Support</div>
+                <div class="service-desc">Offering support for IT-related issues and troubleshooting.</div>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">&#127968;</span>
+                <div class="service-title">Home Design Services</div>
+                <div class="service-desc">Providing design solutions for residential spaces.</div>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">&#128736;</span>
+                <div class="service-title">Project Management</div>
+                <div class="service-desc">Managing projects from inception to completion, ensuring timely delivery.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0f7fa 0%, #b3e5fc 100%);
+            min-height: 100vh;
+            color: #222;
+            animation: fadeInBg 1.5s;
+        }
+        @keyframes fadeInBg {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: rgba(255,255,255,0.95);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(44, 62, 80, 0.15);
+            padding: 32px 36px 36px 36px;
+            animation: slideUp 1s;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(40px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        .logo {
+            font-size: 2em;
+            color: #1976d2;
+            font-weight: bold;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+        }
+        .logo i {
+            margin-right: 8px;
+            color: #1976d2;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 22px;
+            padding: 0;
+            margin: 0;
+        }
+        .nav-links li a {
+            text-decoration: none;
+            color: #1976d2;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+        }
+        .nav-links li a:hover, .nav-links li a:focus {
+            background: #1976d2;
+            color: #fff;
+            transform: translateY(-2px) scale(1.05);
+        }
+        h5 {
+            font-size: 2.1em;
+            color: #1976d2;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            animation: fadeInTitle 1.2s;
+        }
+        @keyframes fadeInTitle {
+            from { opacity: 0; transform: translateY(-20px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        p {
+            font-size: 1.1em;
+            margin-bottom: 28px;
+            color: #444;
+        }
+        ul {
+            padding-left: 0;
+        }
+        .exp-list > li {
+            background: #f1f8ff;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            padding: 22px 24px 16px 24px;
+            box-shadow: 0 2px 12px rgba(25, 118, 210, 0.07);
+            position: relative;
+            animation: fadeInExp 1s;
+        }
+        @keyframes fadeInExp {
+            from { opacity: 0; transform: translateX(-30px);}
+            to { opacity: 1; transform: translateX(0);}
+        }
+        .exp-list > li strong {
+            display: flex;
+            align-items: center;
+            font-size: 1.15em;
+            margin-bottom: 8px;
+        }
+        .exp-list > li strong i {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        .exp-list ul {
+            list-style-type: disc;
+            margin-left: 32px;
+            margin-top: 6px;
+        }
+        @media (max-width: 700px) {
+            .container { padding: 18px 6vw; }
+            .navbar { flex-direction: column; gap: 10px;}
+            .nav-links { flex-wrap: wrap; gap: 10px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-briefcase"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="projects.html"><i class="fas fa-code"></i> Projects</a></li>
+                <li><a href="skills.html"><i class="fas fa-cogs"></i> Skills</a></li>
+                <li><a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a></li>
+                <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                <li><a href="certifications.html"><i class="fas fa-certificate"></i> Certifications</a></li>
+                <li><a href="services.html"><i class="fas fa-concierge-bell"></i> Services</a></li>
+                
+                
+            </ul>
+        </nav>
+        <h5><i class="fas fa-briefcase"></i> EXPERIENCE</h5>
+        <p>In my journey, I have managed to acquire the following experience:</p>
+        <ul class="exp-list">
+            <li>
+                <strong style="color:#2c3e50;">
+                    <i class="fas fa-school"></i>
+                    E-candre (School Admin) – Department of Education
+                </strong>
+                <ul>
+                    <li>Managed school enrollment processes and maintained accurate student records.</li>
+                    <li>Provided administrative support to staff and ensured smooth daily operations.</li>
+                    <li>Handled correspondence, scheduling, and document management for the school.</li>
+                    <li>Offered IT support and troubleshooting for school systems and applications.</li>
+                    <li>Assisted in project management, planning, and execution of school initiatives.</li>
+                </ul>
+            </li>
+            <li>
+                <strong style="color:#2980b9;">
+                    <i class="fas fa-database"></i>
+                    Re-assembler – Department of Home Affairs (Digitization Project)
+                </strong>
+                <ul>
+                    <li>Participated in the digitization of critical records and documents.</li>
+                    <li>Ensured data accuracy and integrity during the digital conversion process.</li>
+                    <li>Collaborated with teams to streamline workflows and improve efficiency.</li>
+                    <li>Conducted quality checks and resolved discrepancies in digital records.</li>
+                    <li>Supported project management and timely delivery of digitization milestones.</li>
+                </ul>
+            </li>
+            <li>
+                <strong style="color:#16a085;">
+                    <i class="fas fa-globe"></i>
+                    Web Development Experience
+                </strong>
+                <ul>
+                    <li>Developed and maintained websites using HTML, CSS, and JavaScript.</li>
+                    <li>Implemented responsive design for mobile-friendly user experiences.</li>
+                    <li>Worked with CMS platforms such as WordPress and Joomla.</li>
+                    <li>Collaborated with designers to create intuitive user interfaces.</li>
+                </ul>
+            </li>
+            <li>
+                <strong style="color:#8e44ad;">
+                    <i class="fas fa-user-tie"></i>
+                    Professional & Soft Skills
+                </strong>
+                <ul>
+                    <li>Strong problem-solving and analytical skills.</li>
+                    <li>Excellent communication and teamwork abilities.</li>
+                    <li>Efficient time management and adaptability to new technologies.</li>
+                    <li>Experience working collaboratively to achieve project goals.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

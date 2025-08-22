@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Banele Mditshwa</title>
+    <!-- Google Fonts for modern look -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0f7fa 0%, #b3e5fc 100%);
+            min-height: 100vh;
+            color: #222;
+        }
+        .container {
+            max-width: 600px;
+            margin: 60px auto 0 auto;
+            background: rgba(255,255,255,0.95);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            padding: 32px 36px 36px 36px;
+            animation: fadeInUp 1s ease;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 32px;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #039be5;
+            letter-spacing: 2px;
+            animation: logoPop 1s;
+        }
+        @keyframes logoPop {
+            0% { transform: scale(0.7);}
+            80% { transform: scale(1.1);}
+            100% { transform: scale(1);}
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 18px;
+            padding: 0;
+            margin: 0;
+        }
+        .nav-links li a {
+            text-decoration: none;
+            color: #039be5;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 8px;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        }
+        .nav-links li a:hover {
+            background: #039be5;
+            color: #fff;
+            box-shadow: 0 2px 8px rgba(3,155,229,0.12);
+        }
+        h4 {
+            font-size: 2rem;
+            color: #0277bd;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            animation: fadeIn 1.2s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0;}
+            to { opacity: 1;}
+        }
+        ul.contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul.contact-list li {
+            margin-bottom: 22px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            opacity: 0;
+            animation: slideIn 0.7s forwards;
+        }
+        ul.contact-list li:nth-child(1) { animation-delay: 0.2s;}
+        ul.contact-list li:nth-child(2) { animation-delay: 0.4s;}
+        ul.contact-list li:nth-child(3) { animation-delay: 0.6s;}
+        ul.contact-list li:nth-child(4) { animation-delay: 0.8s;}
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-30px);}
+            to { opacity: 1; transform: translateX(0);}
+        }
+        .contact-icon {
+            font-size: 1.5em;
+            color: #039be5;
+            min-width: 32px;
+            text-align: center;
+        }
+        a {
+            color: #0277bd;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        a:hover {
+            color: #01579b;
+            text-decoration: underline;
+        }
+        @media (max-width: 700px) {
+            .container {
+                padding: 18px 8px 24px 8px;
+            }
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-address-card"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
+                
+                <li><a href="skills.html"><i class="fa fa-cogs"></i> Skills</a></li>
+                <li><a href="experience.html"><i class="fa fa-briefcase"></i> Experience</a></li>
+                <li><a href="education.html"><i class="fa fa-graduation-cap"></i> Education</a></li>
+                
+                <li><a href="services.html"><i class="fa fa-handshake"></i> Services</a></li>
+                <li><a href="contact.html"><i class="fa fa-envelope"></i> Contacts</a></li>
+            </ul> 
+        </nav>
+        <h4><i class="fa-solid fa-paper-plane"></i> Contact Information</h4>
+        <ul class="contact-list">
+            <li>
+                <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
+                <strong>Email:</strong>
+                <a href="mailto:banelemzize@gmail.com">banelemzize@gmail.com</a>
+            </li>
+            <li>
+                <span class="contact-icon"><i class="fa-brands fa-github"></i></span>
+                <strong>GitHub:</strong>
+                <a href="https://github.com/Ba9900" target="_blank" rel="noopener noreferrer">Ba9900</a>
+            </li>
+            <li>
+                <span class="contact-icon"><i class="fa-brands fa-linkedin"></i></span>
+                <strong>LinkedIn:</strong>
+                <a href="https://www.linkedin.com/in/banele-mditshwa-a17150217" target="_blank" rel="noopener noreferrer">
+                    banele-mditshwa
+                </a>
+            </li>
+            <li>
+                <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
+                <strong>Cellphone:</strong>
+                <a href="tel:+27792832637">+27 79 283 2637</a>
+                <a href="alternative:+27737471285">+27737471285</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

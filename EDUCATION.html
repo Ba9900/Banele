@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+            font-family: 'Montserrat', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 500px;
+            margin: 48px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(60, 72, 88, 0.12);
+            padding: 36px 32px;
+            animation: fadeIn 1.2s cubic-bezier(.77,0,.18,1) both;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(40px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        h2 {
+            text-align: center;
+            color: #4f46e5;
+            letter-spacing: 2px;
+            margin-bottom: 32px;
+            font-size: 2rem;
+            font-weight: 600;
+            position: relative;
+        }
+        h2 .fa-graduation-cap {
+            margin-right: 12px;
+            color: #6366f1;
+            animation: capBounce 1.5s infinite alternate;
+        }
+        @keyframes capBounce {
+            0% { transform: translateY(0);}
+            100% { transform: translateY(-8px);}
+        }
+        ul.education-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        li.education-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 28px;
+            opacity: 0;
+            transform: translateX(-30px);
+            animation: slideIn 0.7s forwards;
+        }
+        li.education-item:nth-child(1) { animation-delay: 0.2s;}
+        li.education-item:nth-child(2) { animation-delay: 0.4s;}
+        li.education-item:nth-child(3) { animation-delay: 0.6s;}
+        li.education-item:nth-child(4) { animation-delay: 0.8s;}
+        li.education-item:nth-child(5) { animation-delay: 1s;}
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .edu-icon {
+            font-size: 1.5rem;
+            color: #6366f1;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        .edu-details {
+            flex: 1;
+        }
+        .edu-title {
+            font-weight: 600;
+            font-size: 1.08rem;
+            color: #22223b;
+        }
+        .edu-meta {
+            color: #64748b;
+            font-size: 0.98rem;
+            margin-top: 2px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 18px 8px;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2><i class="fa-solid fa-graduation-cap"></i>EDUCATION</h2>
+        <ul class="education-list">
+            <li class="education-item">
+                <span class="edu-icon"><i class="fa-solid fa-laptop-code"></i></span>
+                <div class="edu-details">
+                    <div class="edu-title">Full Stack Development Certificate</div>
+                    <div class="edu-meta">FNB Academy &bull; 2025</div>
+                </div>
+            </li>
+            <li class="education-item">
+                <span class="edu-icon"><i class="fa-solid fa-building-columns"></i></span>
+                <div class="edu-details">
+                    <div class="edu-title">National Diploma in Information Technology - Business Applications</div>
+                    <div class="edu-meta">Walter Sisulu University &bull; 2022</div>
+                </div>
+            </li>
+            <li class="education-item">
+                <span class="edu-icon"><i class="fa-solid fa-certificate"></i></span>
+                <div class="edu-details">
+                    <div class="edu-title">Technical Support Fundamentals</div>
+                    <div class="edu-meta">Google &bull; 2022</div>
+                </div>
+            </li>
+            <li class="education-item">
+                <span class="edu-icon"><i class="fa-solid fa-shield-halved"></i></span>
+                <div class="edu-details">
+                    <div class="edu-title">Cyber Security Short Course</div>
+                    <div class="edu-meta">Oxford Home Study Centre &bull; 2022</div>
+                </div>
+            </li>
+            <li class="education-item">
+                <span class="edu-icon"><i class="fa-solid fa-network-wired"></i></span>
+                <div class="edu-details">
+                    <div class="edu-title">IT Essentials Certificate</div>
+                    <div class="edu-meta">Cisco Networking Academy &bull; 2018</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

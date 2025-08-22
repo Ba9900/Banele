@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Banele Mditshwa</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+            color: #22223b;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: lightblue;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(60, 72, 88, 0.12);
+            padding: 40px 32px 32px 32px;
+            animation: fadeInUp 1s cubic-bezier(.23,1.01,.32,1) both;
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(40px);}
+            100% { opacity: 1; transform: translateY(0);}
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 32px;
+            animation: slideDown 1s 0.2s cubic-bezier(.23,1.01,.32,1) both;
+        }
+        @keyframes slideDown {
+            0% { opacity: 0; transform: translateY(-40px);}
+            100% { opacity: 1; transform: translateY(0);}
+        }
+        .logo {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: #7670f7;
+            letter-spacing: 2px;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 22px;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links li {
+            transition: transform 0.2s;
+        }
+        .nav-links li:hover {
+            transform: translateY(-3px) scale(1.05);
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #22223b;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-links a:hover, .nav-links a:focus {
+            background: #4f46e5;
+            color: #fff;
+        }
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: #4f46e5;
+            letter-spacing: 1px;
+            animation: fadeIn 1.2s 0.4s both;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0;}
+            100% { opacity: 1;}
+        }
+        p {
+            font-size: 1.08rem;
+            line-height: 1.7;
+            margin-bottom: 18px;
+            color: #37306b;
+            animation: fadeIn 1.2s both;
+        }
+        p:nth-child(n+4) {
+            animation-delay: calc(0.5s + 0.1s * (var(--i, 0)));
+        }
+        /* Animate paragraphs in sequence */
+        p:nth-of-type(1) { --i: 1; }
+        p:nth-of-type(2) { --i: 2; }
+        p:nth-of-type(3) { --i: 3; }
+        p:nth-of-type(4) { --i: 4; }
+        p:nth-of-type(5) { --i: 5; }
+        p:nth-of-type(6) { --i: 6; }
+        p:nth-of-type(7) { --i: 7; }
+        p:nth-of-type(8) { --i: 8; }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            .container {
+                padding: 18px 8px;
+            }
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo"></div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                
+            </ul>
+        </nav>
+        <h2 style="text-align: center;">About me and my background.</h2>
+        <p>My name is Banele Mditshwa from Bizana Eastern Cape currently in Rustenburg North West where I am currently looking for job opportunities in both Tech and Design and am always available.</p>
+        <p>I am a Qualified Business Analyst, IT support Technician and I am also a self-taught web developer with a passion for creating dynamic and user-friendly websites. I have experience in HTML, CSS, and JavaScript, and I am always eager to learn new technologies and improve my skills.</p>
+        <p>I have a strong understanding of web development principles and best practices, and I am comfortable working with various frameworks and libraries. I have worked on several projects, including personal websites, small business sites, and web applications, which have helped me develop my problem-solving skills and attention to detail.</p>
+        <p>My goal is to create websites that not only look great but also provide a seamless user experience. I believe that a well-designed website can make a significant impact on a business's success, and I am committed to delivering high-quality work that meets the needs of my clients.</p>
+        <p>I am proficient in using version control systems like Git, which allows me to collaborate effectively with other developers and manage my codebase efficiently. I am also familiar with responsive design principles, ensuring that websites are accessible and functional across various devices and screen sizes.</p>
+        <p>In addition to my technical skills, I have a strong background in design, which allows me to create visually appealing and functional websites. I am also a quick learner and a team player, which makes me adaptable to different work environments.</p>
+        <p>I am also a self-taught House designer, I build beautiful modern house plans.</p>
+        <p>In my free time, I enjoy exploring new technologies, contributing to open-source projects, and staying up-to-date with the latest trends in web development. I am excited about the opportunity to work with a team of talented professionals and contribute to innovative projects that make a difference.</p>
+        <p>Thank you for taking the time to learn more about me. I look forward to connecting with you and discussing how I can contribute to your team.</p>
+    </div>
+</body>
+</html>
